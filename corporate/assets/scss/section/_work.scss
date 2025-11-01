@@ -1,0 +1,73 @@
+@use '../foundation/variable'as var;
+@use '../foundation/mixin';
+
+/*********************************************
+ * 
+ * 事業実績
+ *
+**********************************************/
+
+.work-text {
+    line-height: 1.8;
+    letter-spacing: .05rem;
+}
+
+/* 棒グラフ
+================================= */
+.work-chart {
+    width: 100%;
+    border: solid black 1px;
+    margin: 32px 0;
+    padding: 16px 0;
+
+    p {
+        text-align: center;
+        font-weight: bold;
+        letter-spacing: .3rem;
+
+    }
+
+}
+
+.ct-series-a .ct-bar {
+    stroke: #0068B7;
+}
+
+.ct-bar {
+    stroke-width: 6%;
+}
+
+.ct-label {
+    color: black;
+}
+
+/* 誘導ボタン右寄せに */
+#work .btn-common {
+    text-align: right;
+}
+
+/* フレックスボックス
+================================= */
+.flexBox {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+
+    @include mixin.M {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+
+        .flexItem {
+            width: calc((100% - 32px) / 2);
+        }
+    }
+}

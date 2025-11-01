@@ -1,0 +1,51 @@
+@use '../foundation/variable'as var;
+@use '../foundation/mixin';
+
+/*********************************************
+ * 
+ * 製品情報
+ *
+**********************************************/
+.product {
+  display: grid;
+  gap: 32px;
+  margin-top: 32px;
+
+  @include mixin.S {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include mixin.L {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  &-item {
+    border: solid black 1px;
+  }
+
+  &-contentTtl {
+    font-weight: bold;
+    font-size: mixin.rem(18);
+    padding-bottom: 1rem;
+    border-bottom: solid black 2px;
+    margin-bottom: 1rem;
+
+    @include mixin.M {
+      font-size: mixin.rem(24);
+    }
+  }
+
+  &-text {
+    padding: 16px;
+    text-align: center;
+
+    p {
+      text-align: left;
+      margin-bottom: 16px;
+      line-height: 1.8;
+      letter-spacing: .05rem;
+    }
+  }
+}
+
+//.product

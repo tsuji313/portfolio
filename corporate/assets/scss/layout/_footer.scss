@@ -1,0 +1,183 @@
+@use '../foundation/variable'as var;
+@use '../foundation/mixin';
+
+
+/*********************************************
+ * 
+ * footer
+ *
+**********************************************/
+footer .container{
+    padding-bottom: 32px;
+}
+/* Banner
+================================= */
+.footer-bnr {
+    display: grid;
+    gap: 32px;
+
+    @include mixin.S {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mixin.L {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* フッターフレックスボックス
+================================= */
+.footer-flexBox {
+    margin-top: calc(64px - 0.8rem);
+
+    @include mixin.LL {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: reverse;
+            -ms-flex-direction: row-reverse;
+                flex-direction: row-reverse;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        margin-top: 80px;
+    }
+}
+
+/* フッターナビ */
+.footer-navArea {
+    width: 100%;
+
+    @include mixin.LL {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: end;
+            -ms-flex-pack: end;
+                justify-content: flex-end;
+        width: 74%;
+    }
+}
+
+.footer-navList {
+    @include mixin.LL {
+        margin-left: 5%;
+    }
+}
+
+.footer-navTtl {
+    font-size: mixin.rem(18);
+    font-weight: bold;
+    position: relative;
+    cursor: pointer;
+    padding: mixin.rem(11);
+    border-bottom: solid 1px #888;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+
+    @include mixin.LL {
+        padding: 0;
+        border-bottom: none;
+    }
+
+    &::before,
+    &::after {
+        position: absolute;
+        content: '';
+        width: 15px;
+        height: 2px;
+        background-color: black;
+
+        @include mixin.LL {
+            display: none;
+        }
+    }
+
+    &::before {
+        top: 48%;
+        right: 15px;
+        -webkit-transform: rotate(0deg);
+            -ms-transform: rotate(0deg);
+                transform: rotate(0deg);
+    }
+
+    &::after {
+        top: 48%;
+        right: 15px;
+        -webkit-transform: rotate(90deg);
+            -ms-transform: rotate(90deg);
+                transform: rotate(90deg);
+    }
+
+    &.close::before {
+        -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+                transform: rotate(45deg);
+    }
+
+    &.close::after {
+        -webkit-transform: rotate(-45deg);
+            -ms-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+    }
+
+}
+
+.footer-navBox {
+    display: none;
+    padding: mixin.rem(12) mixin.rem(16);
+
+    @include mixin.LL {
+        display: block;
+        padding: 0;
+    }
+
+    a {
+        line-height: 3;
+
+        @include mixin.LL {
+            line-height: 2;
+        }
+    }
+
+    li::before {
+        content: '-';
+        display: inline-block;
+        margin-right: mixin.rem(3);
+    }
+
+
+}
+
+/* アドレス */
+.footer-addArea {
+    margin-top: 64px;
+    text-align: center;
+    line-height: 1.75;
+
+    @include mixin.LL {
+        text-align: left;
+        margin-top: 0;
+        width: 26%;
+    }
+
+    img {
+        width: 300px;
+        margin-bottom: 16px;
+    }
+}
+
+/* コピーライト
+================================= */
+.copyArea {
+    width: 100vw;
+    height: 46px;
+    background-color: var.$mainColor;
+    text-align: center;
+
+    small {
+        color: white;
+        line-height: 46px;
+    }
+}

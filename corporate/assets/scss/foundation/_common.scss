@@ -1,0 +1,117 @@
+@use 'variable'as var;
+@use 'mixin';
+
+/*********************************************
+ * 
+ * GENERAL STYLING
+ *
+**********************************************/
+html,
+body {
+    overflow-x: hidden;
+}
+
+html {
+    font-size: 100%;
+}
+
+body {
+    font-family: var.$textFont;
+    color: black;
+}
+
+/*********************************************
+ * 
+ * COMMON
+ *
+**********************************************/
+
+img {
+    max-width: 100%;
+    vertical-align: top;
+}
+
+/* Layout */
+.container {
+    max-width: calc(1156px + 10%);
+    padding: 32px 5%;
+    margin: 0 auto;
+
+    @include mixin.M {
+        padding: 80px 5%;
+    }
+
+    @include mixin.L {
+        max-width: calc(1156px + (7.68% * 2));
+        padding: 80px 7.68%;
+    }
+}
+
+/* Heading */
+.siteTtl {
+    width: 150px;
+
+    @include mixin.L {
+        width: 200px;
+    }
+}
+
+.sectionTtl {
+    font-size: mixin.rem(26);
+    font-weight: bold;
+    padding-left: 8px;
+    border-left: 8px solid var.$mainColor;
+
+    @include mixin.M {
+        font-size: mixin.rem(32);
+    }
+
+    @include mixin.L {
+        font-size: mixin.rem(35);
+    }
+}
+
+
+// リード文　会社情報　事業実績
+.lead {
+    margin: 32px 0;
+    font-size: mixin.rem(18);
+    font-weight: bold;
+    line-height: 1.8;
+    letter-spacing: .05rem;
+
+    @include mixin.M {
+        font-size: mixin.rem(24);
+    }
+
+    @include mixin.L {
+        font-size: mixin.rem(28);
+    }
+}
+
+/* 誘導ボタン */
+.btn-common a {
+    display: inline-block;
+    padding: mixin.rem(14) mixin.rem(16);
+    background-color: var.$subColor;
+    color: white;
+    font-weight: bold;
+
+    &::after {
+        content: '＞';
+        display: inline-block;
+        margin-left: .2rem;
+    }
+
+    @include mixin.M {
+        &:hover {
+            background-color: var.$mainColor;
+        }
+    }
+}
+
+/* 背景アミ */
+.bg {
+    background-color: rgba(255, 255, 255, .4);
+    display: inline-block;
+}

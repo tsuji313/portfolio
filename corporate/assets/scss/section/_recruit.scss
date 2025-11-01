@@ -1,0 +1,99 @@
+@use '../foundation/variable'as var;
+@use '../foundation/mixin';
+
+/*********************************************
+ * 
+ * 採用情報
+ *
+**********************************************/
+.recruit-lead {
+    margin: 20px 0;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+#recruit {
+    .cardList {
+        display: grid;
+        gap: 32px;
+        margin-top: 32px;
+
+        @include mixin.S {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include mixin.L {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+    }
+
+    .card {
+        display: block;
+
+        &::before {
+            content: '';
+            display: block;
+            padding-top: 200px;
+            background-position: center;
+            background-size: cover;
+
+            @include mixin.M {
+                padding-top: 300px;
+            }
+        }
+
+        &-1::before {
+            background-image: url(../img/recruit-1.webp);
+
+            @include mixin.retina {
+                background-image: url(../img/recruit-1@2x.webp);
+            }
+
+        }
+
+        &-2::before {
+            background-image: url(../img/recruit-2.webp);
+
+            @include mixin.retina {
+                background-image: url(../img/recruit-2@2x.webp);
+            }
+
+        }
+
+        &-3::before {
+            background-image: url(../img/recruit-3.webp);
+
+            @include mixin.retina {
+                background-image: url(../img/recruit-3@2x.webp);
+            }
+
+        }
+
+        &-text {
+            display: block;
+            text-align: center;
+            padding: mixin.rem(18) 0;
+            background-color: var.$subColor;
+            font-size: mixin.rem(18);
+            font-weight: bold;
+            color: white;
+            letter-spacing: .3rem;
+
+            @include mixin.M {
+                &:hover {
+                    background-color: var.$mainColor;
+                }
+            }
+
+            &::after {
+                content: '＞';
+                margin-left: .3rem;
+            }
+
+            @include mixin.M {
+                font-size: mixin.rem(24);
+            }
+        }
+    }
+}

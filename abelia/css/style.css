@@ -1,0 +1,543 @@
+@charset "utf-8";
+/*********************************************
+ * 
+ * 共通
+ *
+**********************************************/
+
+html {
+    font-size: 100%;
+}
+
+body {
+    line-height: 1.7;
+    color: #6f6152;
+    font-family: 'Shippori Mincho', serif;
+    font-weight: 400;
+    letter-spacing: .05em;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: top;
+}
+
+.container {
+    max-width: 1900px;
+    margin: 0 auto;
+    padding: 0 8%;
+}
+
+/* スマホ用 */
+
+@media screen and (max-width: 480px) {
+    .container {
+        padding: 0 3%;
+    }
+}
+
+/* スマホ用 改行を入れる*/
+@media screen and (min-width: 480px) {
+    .br-sp {
+        display: none;
+    }
+}
+
+/*********************************************
+ * 
+ * ヘッダー
+ *
+**********************************************/
+.header {
+    width: 100vw;
+    height: 400px;
+    background-image: url(../img/MV.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 2),
+(-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 2dppx) {
+    .header {
+        background-image: url(../img/MV@2x.jpg);
+    }
+}
+
+.siteTitle {
+    line-height: 400px;
+    color: #fff;
+    font-family: "Italianno", cursive;
+    font-weight: normal;
+    font-size: 5rem;
+    text-align: center;
+}
+
+/* スマホ用 */
+@media screen and (max-width: 480px) {
+    .header {
+        height: 200px;
+    }
+
+    .siteTitle {
+        line-height: 200px;
+        font-size: 2.6rem;
+    }
+}
+
+/*********************************************
+ * 
+ * ナビゲーション
+ *
+**********************************************/
+/* トップメニュー */
+
+.topMenu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-top: 16px;
+}
+
+.topMenu a {
+    display: inline-block;
+    padding-bottom: 6px;
+    border-bottom: solid 1px #fff;
+    color: #dd654e;
+    text-decoration: none;
+}
+
+.topMenu a:hover {
+    border-bottom: solid 1px #dd654e;
+}
+
+/* タブレット用 */
+
+@media screen and (max-width: 846px) {
+    .topMenu {
+        display: none;
+    }
+}
+
+/* メニューボタン */
+
+.nav_btn {
+    position: fixed;
+    top: 32px;
+    right: 3.78%;
+    z-index: 1000;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    color: #fff;
+    background-color: #6f6152;
+    text-align: center;
+    -webkit-transition: all .4s;
+    transition: all .4s;
+}
+
+.nav_btn.open-menu {
+    color: #6f6152;
+    background-color: #fff;
+}
+
+/* サイドメニュー */
+
+.sideMenu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 800;
+    width: 38%;
+    height: 100vh;
+    padding-top: calc(32px + 60px + 32px);
+    background-color: #6f6152;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: all .4s;
+    transition: all .4s;
+}
+
+.sideMenu.open-menu {
+    visibility: visible;
+    opacity: 1;
+}
+
+.sideMenu a {
+    display: inline-block;
+    margin-bottom: 32px;
+    margin-left: 12.5%;
+    padding-bottom: 6px;
+    border-bottom: solid 1px #6f6152;
+    color: #fff;
+}
+
+.sideMenu a:hover {
+    border-bottom: solid 1px #fff;
+}
+
+/* スマホ用 */
+
+@media screen and (max-width: 480px) {
+    .nav_btn {
+        top: 8px;
+        right: 8px;
+    }
+
+    .sideMenu {
+        width: 100%;
+    }
+}
+
+/*********************************************
+ * 
+ * about,cutflowers,arrangement 共通
+ *
+**********************************************/
+/* h2タグ用 */
+
+.sectionTitle {
+    margin-top: 160px;
+    margin-bottom: 48px;
+    font-weight: 600;
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+/* タブレット用 */
+@media screen and (max-width: 846px) {
+    .sectionTitle {
+        margin-top: 48px;
+    }
+}
+
+/* スマホ用 */
+@media screen and (max-width: 480px) {
+    .sectionTitle {
+        margin-top: 32px;
+        margin-bottom: 16px;
+    }
+}
+
+/* リード文 */
+
+.lead {
+    margin-bottom: 48px;
+    text-align: center;
+}
+
+
+/* タブレット用 */
+@media screen and (max-width: 480px) {
+
+    .lead {
+        text-align: left;
+        margin-bottom: 16px;
+    }
+}
+
+/* アイテム画像とキャプション */
+.wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+}
+
+.item {
+    width: 32%;
+    margin-bottom: 32px;
+}
+
+.item img {
+    width: 100%;
+}
+
+.item figcaption {
+    margin-top: 8px;
+}
+
+.item figcaption a {
+    border-bottom: #6f6152 solid 1px;
+}
+
+.item figcaption a:hover {
+    color: #a0a0a0;
+}
+
+/* タブレット用 */
+
+@media screen and (max-width: 846px) {
+    .wrap {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+    }
+
+    .item {
+        width: 100%;
+    }
+}
+
+/*********************************************
+ * 
+ * リンクボタン
+ *
+**********************************************/
+
+
+.btn {
+    margin-top: calc(160px - 32px);
+    margin-bottom: 160px;
+    text-align: center;
+}
+
+.btn a {
+    display: inline-block;
+    padding: 1vw 11vw;
+    border: #6f6152 solid 1px;
+    border-radius: 12px;
+    color: #fff;
+    background-color: #6f6152;
+    font-weight: bold;
+}
+
+.btn a:hover {
+    border: #6f6152 solid 1px;
+    color: #6f6152;
+    background-color: #fff;
+}
+
+/* タブレット用 */
+
+@media screen and (max-width: 846px) {
+    .btn a {
+        width: 100%;
+    }
+}
+
+/* スマホ用 */
+
+@media screen and (max-width: 480px) {
+    .btn {
+        margin-top: calc(60px - 32px);
+        margin-bottom: 60px;
+    }
+
+    .btn a {
+        padding: 2vw 11vw;
+    }
+}
+
+/*********************************************
+ * 
+ * Shop
+ *
+**********************************************/
+
+
+.shopDetailed {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    max-width: 1000px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0 auto;
+}
+
+.shopData {
+    width: 40%;
+    line-height: 3.333;
+    font-size: 1.125rem;
+}
+
+.shopData span {
+    font-weight: bold;
+}
+
+.shopMap {
+    width: 60%;
+}
+
+.mapArea {
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    padding-bottom: 100%;
+}
+
+.mapArea iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#shop hr {
+    margin-top: 160px;
+    border: #6f6152 solid 1px;
+}
+
+/* タブレット用 */
+
+@media screen and (max-width: 846px) {
+    .shopDetailed {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+    }
+
+    .shopData,
+    .shopMap {
+        width: 100%;
+    }
+
+    .shopData {
+        line-height: 2;
+        margin-bottom: 32px;
+        padding: 32px;
+        background-color: #6f6152;
+        color: #fff;
+    }
+}
+
+/* スマホ用 */
+
+@media screen and (max-width: 480px) {
+    #shop hr {
+        margin-top: 60px;
+    }
+
+    .shopData {
+        line-height: 2;
+        padding: 16px;
+    }
+}
+
+/*********************************************
+ * 
+ * Contact
+ *
+**********************************************/
+
+#contact>.lead {
+    margin-bottom: calc(48px - 30px);
+}
+
+.contact_table {
+    width: 100%;
+    max-width: 730px;
+    margin: 0 auto;
+    border-collapse: separate;
+    border-spacing: 0 30px;
+}
+
+.contact_table th {
+    width: 160px;
+    font-weight: normal;
+}
+
+.contact_table td {
+    width: calc(100% - 160px);
+}
+
+.contact_table input,
+.contact_table textarea {
+    width: 100%;
+    padding: 6px;
+    border: #6f6152 solid 1px;
+}
+
+/* タブレット用 */
+@media screen and (max-width: 846px) {
+    .contact_table th {
+        display: block;
+        width: 100%;
+    }
+
+    .contact_table td {
+        display: block;
+        width: 100%;
+    }
+}
+
+/* スマホ用 */
+@media screen and (max-width: 480px) {
+    .contact_table {
+        border-spacing: 0 16px;
+    }
+}
+
+/*********************************************
+ * 
+ * Footer
+ *
+**********************************************/
+.footer {
+    width: 100vw;
+    background-color: #6f6152;
+}
+
+.tooter_wrap {
+    max-width: 1900px;
+    margin: 0 auto;
+    padding: 16px 8%;
+}
+
+.footer table {
+    width: 100%;
+    line-height: 80px;
+    color: #fff;
+}
+
+.footer table td {
+    width: 33.333%;
+}
+
+.footer_logo {
+    font-family: "Italianno", cursive;
+    font-size: 2.4rem;
+}
+
+.copyright {
+    text-align: center;
+}
+
+.footer_sns {
+    font-size: 2.4rem;
+    text-align: right;
+}
+
+/* タブレット用 */
+@media (max-width: 846px) {
+
+    .footer table {
+        line-height: calc(140px / 3);
+    }
+
+    .footer table td {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer_logo {
+        font-size: 2rem;
+    }
+
+    .footer_sns {
+        font-size: 2rem;
+    }
+}

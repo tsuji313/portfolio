@@ -1,0 +1,546 @@
+@charset "UTF-8";
+
+/*********************************************
+ * 
+ * Global
+ *
+**********************************************/
+:root {
+  --base-color: #f3f4f6;
+  --main-color: #c8dad3;
+  --accent-color: #4aa8a8;
+  --gray-color: #4b4b4b;
+  --main-font: "Cormorant", serif;
+  --base-font: "Noto Sans JP", serif;
+  --accent-font: "Noto Serif JP", serif;
+  /* 
+light 300
+normal 300
+Medium 500;
+bold 700
+font-style normal
+*/
+}
+html,
+body {
+  overflow-x: hidden;
+}
+html {
+  font-size: 100%;
+}
+
+body {
+  font: 400 1rem var(--base-font);
+  color: var(--gray-color);
+  line-height: 1.8;
+  letter-spacing: 0.05em;
+  background-color: #fff;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: top;
+}
+
+/*********************************************
+ * 
+ * header
+ *
+**********************************************/
+/* サイトタイトル */
+.site-title {
+  padding: 32px;
+  @media (width < 700px) {
+    padding: 16px;
+  }
+
+  h1 {
+    font-weight: 800;
+    font-family: var(--main-font);
+    font-style: normal;
+    font-size: 2.6rem;
+    line-height: 1;
+    color: var(--accent-color);
+    @media (width < 700px) {
+      font-size: 1.8rem;
+
+      p {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+header {
+  /* ハンバーガー */
+  .hamburger {
+    position: fixed;
+    z-index: 10;
+    top: 32px;
+    right: 32px;
+    width: 60px;
+    height: 60px;
+    background-color: var(--accent-color);
+    @media (width < 700px) {
+      top: 16px;
+      right: 16px;
+    }
+    span,
+    span::after,
+    span::before {
+      position: absolute;
+      display: block;
+      content: "";
+      width: 100%;
+      height: 2px;
+      background-color: var(--base-color);
+      transition: all 0.5s;
+    }
+    span::before {
+      top: -10px;
+    }
+    span::after {
+      bottom: -10px;
+    }
+  }
+
+  /* ハンバーガーメニューボタンをクリックしたとき */
+  .hamburger.open span {
+    background-color: transparent;
+  }
+  .hamburger.open span::before {
+    top: 0px;
+    transform: rotate(45deg);
+  }
+  .hamburger.open span::after {
+    bottom: 0px;
+    transform: rotate(-45deg);
+  }
+  /* ナビリスト */
+  .header-nav {
+    position: fixed;
+    z-index: 9;
+    top: 0;
+    right: -100%;
+    width: 50vw;
+    background-color: var(--main-color);
+    padding-top: 88px;
+    padding-bottom: 88px;
+    text-align: center;
+    transition: all 0.6s;
+
+    @media (width < 600px) {
+      width: 100%;
+    }
+  }
+
+  /* ハンバーガーメニューが開いたとき */
+  .header-nav.open {
+    right: 0;
+  }
+
+  .nav-list {
+    font-weight: 500;
+    font-family: var(--main-font);
+    font-size: calc(28 / 16 * 1rem);
+
+    li:not(:last-of-type) {
+      margin-bottom: 32px;
+    }
+  }
+
+  .nav-item {
+    display: block;
+    color: var(--accent-color);
+    /* ホバー時 */
+    transition: color 0.5s;
+  }
+
+  /* ホバー時 */
+  .nav-item:focus-visible {
+    color: var(--gray-color);
+  }
+  /* ホバー時 */
+  @media (any-hover: hover) {
+    .nav-item:hover {
+      color: var(--gray-color);
+    }
+  }
+}
+/*********************************************
+ * 
+ * SCROLL ARROW
+ *
+**********************************************/
+.scroll-arrow {
+  position: absolute;
+  right: 6vw;
+  bottom: 0;
+  width: 20px;
+  animation: arrowMove 1.8s ease-in-out infinite;
+  @media (width < 600px) {
+    display: none;
+  }
+
+  span {
+    position: relative;
+    writing-mode: vertical-lr;
+    font-family: var(--accent-font);
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--accent-color);
+  }
+
+  span::before {
+    content: "";
+    position: absolute;
+    bottom: -60px;
+    right: 28px;
+    width: 1px;
+    height: 20px;
+    background-color: var(--accent-color);
+    transform: skewX(-31deg);
+  }
+
+  span::after {
+    content: "";
+    position: absolute;
+    bottom: -60px;
+    width: 1px;
+    height: 120px;
+    background-color: var(--accent-color);
+  }
+}
+@keyframes arrowMove {
+  0% {
+    bottom: 10vh;
+  }
+
+  50% {
+    bottom: 7vh;
+  }
+
+  100% {
+    bottom: 10vh;
+  }
+}
+/*********************************************
+*
+* トップへ戻るボタン
+*
+**********************************************/
+#top-btn {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  right: 32px;
+  bottom: 32px;
+  width: 48px;
+  height: 48px;
+  background-color: var(--accent-color);
+  color: var(--base-color);
+  font-family: var(--accent-font);
+  border-radius: 50%;
+  text-align: center;
+  padding-top: 8px;
+  cursor: pointer;
+  /* ホバー時 */
+  transition: all 0.5s;
+  z-index: 200;
+  @media (width < 700px) {
+    right: 16px;
+    bottom: 16px;
+  }
+}
+
+/* ホバー時 */
+#top-btn:focus-visible {
+  background-color: var(--main-color);
+}
+/* ホバー時 */
+@media (any-hover: hover) {
+  #top-btn:hover {
+    background-color: var(--main-color);
+  }
+}
+/*********************************************
+*
+* Container
+*
+**********************************************/
+
+.container {
+  max-width: 600px;
+  width: 94%;
+  margin: 0 auto;
+}
+
+/*********************************************
+*
+* Section
+*
+**********************************************/
+.section {
+  margin-bottom: 10rem;
+
+  @media (width < 600px) {
+    margin-bottom: 5rem;
+  }
+}
+
+/* セクションの背景 */
+.section.bg-light {
+  padding: 2rem 0 3rem;
+  background-color: var(--base-color);
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  padding-left: calc(50vw - 50%);
+  padding-right: calc(50vw - 50%);
+}
+
+.sectionTitle {
+  text-align: center;
+  padding-bottom: 60px;
+
+  @media (width < 600px) {
+    padding-bottom: 32px;
+  }
+
+  h2 {
+    font-weight: 700;
+    font-family: var(--main-font);
+    font-size: calc(50 / 16 * 1rem);
+    color: var(--accent-color);
+    line-height: 1;
+
+    @media (width < 600px) {
+      font-size: calc(38 / 16 * 1rem);
+    }
+  }
+
+  p {
+    font-family: var(--accent-font);
+  }
+}
+
+/*********************************************
+*
+* 制作物
+* 派遣業務で活きる強み
+*
+**********************************************/
+
+h3 {
+  font-weight: 500;
+  font-size: calc(24 / 16 * 1rem);
+  padding-bottom: 1rem;
+  @media (width < 600px) {
+    font-size: calc(20 / 16 * 1rem);
+  }
+}
+h3:not(:first-of-type) {
+  padding-top: 60px;
+  @media (width < 600px) {
+    padding-top: calc(64 / 16 * 1rem);
+  }
+}
+
+/*********************************************
+  *
+  * 私について
+  *
+  **********************************************/
+.about {
+  display: flex;
+  justify-content: space-between;
+
+  @media (width < 600px) {
+    display: block;
+  }
+
+  .about-img {
+    /* ↓要素を縮めない指定 */
+    flex-shrink: 0;
+    margin-right: 1rem;
+    width: 200px;
+    height: 200px;
+
+    @media (width < 600px) {
+      margin: 0 auto 32px;
+      width: 160px;
+      height: 160px;
+    }
+    img {
+      border-radius: 50%;
+    }
+  }
+
+  .about-text p {
+    padding-bottom: 32px;
+  }
+}
+/*********************************************
+  *
+  * 経験してきたこと
+  *
+  **********************************************/
+#experience {
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    th {
+      width: 30%;
+    }
+    td {
+      width: 70%;
+    }
+    th,
+    td {
+      padding: 0.6rem;
+
+      @media (width < 700px) {
+        display: block;
+        width: 100%;
+        padding: 0.3rem;
+      }
+    }
+    tr {
+      border-bottom: dashed var(--base-color) 3px;
+    }
+    tr:first-of-type {
+      border-top: dashed var(--base-color) 3px;
+    }
+  }
+}
+
+/*********************************************
+  *
+  * 現在できること
+  *
+  **********************************************/
+#skills {
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    th {
+      width: 30%;
+    }
+    td {
+      width: 70%;
+    }
+    th,
+    td {
+      padding: 0.6rem;
+
+      @media (width < 600px) {
+        display: block;
+        width: 100%;
+        padding: 0.3rem;
+      }
+    }
+    tr {
+      border-bottom: dashed #fff 3px;
+    }
+    tr:first-of-type {
+      border-top: dashed #fff 3px;
+    }
+  }
+}
+/*********************************************
+  *
+  * 制作物
+  *
+  **********************************************/
+#works {
+  h3 {
+    text-align: center;
+  }
+
+  img {
+    border: 6px solid #7d93ba15;
+  }
+  /* ホバー時 */
+  img:focus-visible {
+    border-color: var(--main-color);
+  }
+  /* ホバー時 */
+  @media (any-hover: hover) {
+    img:hover {
+      border-color: var(--main-color);
+    }
+  }
+
+  .works-item:not(:last-of-type) {
+    padding-bottom: 12.5rem;
+    @media (width < 700px) {
+      padding-bottom: 3rem;
+    }
+  }
+  /* 説明のテーブル */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2rem;
+    th {
+      width: 30%;
+    }
+    td {
+      width: 70%;
+    }
+    th,
+    td {
+      padding: 0.6rem;
+
+      @media (width < 700px) {
+        display: block;
+        width: 100%;
+        padding: 0.3rem;
+      }
+    }
+    tr {
+      border-bottom: dashed var(--base-color) 3px;
+    }
+    tr:first-of-type {
+      border-top: dashed var(--base-color) 3px;
+    }
+  }
+}
+/*********************************************
+*
+* 派遣業で活きる強み
+*
+**********************************************/
+#strengths {
+  text-align: center;
+}
+/*********************************************
+ * 
+ * footer  
+ *
+**********************************************/
+#footer {
+  margin-top: 120px;
+  position: relative;
+  height: 180px;
+  text-align: center;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  padding-left: calc(50vw - 50%);
+  padding-right: calc(50vw - 50%);
+
+  small {
+    position: absolute;
+    bottom: 0.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: var(--accent-font);
+  }
+  /* 波のアニメーション */
+  #waveCanvas {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  }
+}

@@ -1,0 +1,60 @@
+@use '../foundation/variable'as var;
+@use '../foundation/mixin';
+
+/*********************************************
+ * 
+ * お知らせ
+ *
+**********************************************/
+.infoList {
+    margin: 32px 0;
+    width: 100%;
+
+    &-item {
+        position: relative;
+        padding: 16px 64px 16px 32px;
+        border-top: solid black 1px;
+
+        &:last-child {
+            border-bottom: solid black 1px;
+        }
+
+        &::after {
+            position: absolute;
+            display: block;
+            top: 0;
+            bottom: 0;
+            right: 16px;
+            margin: auto;
+            content: '';
+            width: 18px;
+            height: 18px;
+            border-top: solid 1px black;
+            border-right: solid 1px black;
+            -webkit-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                    transform: rotate(45deg);
+        }
+
+        a{
+            @include mixin.S {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                font-size: mixin.rem(18);
+            }
+        }
+    }
+&-date, &-ttl{
+    line-height: 1.7;
+}
+
+    &-date {
+        width: 26%;
+    }
+
+    &-ttl {
+        width: 74%;
+
+    }
+}

@@ -1,0 +1,43 @@
+@use 'variable'as var;
+
+// ===================================
+// mixin
+// ===================================
+
+
+// メディアクリエ
+@mixin S {
+  @media (min-width: 580px) {
+    @content;
+  }
+}
+
+@mixin M {
+  @media (min-width: 680px) {
+    @content;
+  }
+}
+
+@mixin L {
+  @media (min-width: 980px) {
+    @content;
+  }
+}
+@mixin LL {
+  @media (min-width: 1136px) {
+    @content;
+  }
+}
+
+// レティナ対策
+@mixin retina {
+  @media (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 2dppx) {
+    @content;
+  }
+}
+
+// px→rem
+@function rem($size) {
+  @return ($size / 16)+rem;
+}

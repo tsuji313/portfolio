@@ -1,0 +1,224 @@
+@use '../foundation/variable'as var;
+@use '../foundation/mixin';
+
+
+/*********************************************
+ * 
+ * header
+ *
+**********************************************/
+.header {
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 46px;
+    padding-left: 1%;
+    background-color: rgba(255, 255, 255, .6);
+    -webkit-box-shadow: 0 0 12px 0 #aaa;
+    box-shadow: 0 0 12px 0 #aaa;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+
+    @include mixin.L {
+        height: 60px;
+    }
+}
+
+// .header
+
+/* お問い合わせボタン
+================================= */
+.header-infoBtn {
+    position: fixed;
+    z-index: 200;
+    right: 45px;
+    top: 0;
+
+    @include mixin.L {
+        right: 0;
+    }
+
+    a {
+        display: block;
+        cursor: pointer;
+        background-color: var.$mainColor;
+        padding: 0 .5rem;
+        line-height: 46px;
+        text-align: center;
+        font-weight: bold;
+        color: white;
+
+        @include mixin.M {
+            &:hover {
+                background-color: var.$subColor;
+            }
+        }
+
+        @include mixin.L {
+            line-height: 60px;
+            padding: 0 mixin.rem(24);
+        }
+    }
+}
+
+// .header-infoBtn
+
+/* ナビリスト
+================================= */
+.header-navList {
+    z-index: 10000;
+    margin-right: 0;
+    display: block;
+    position: fixed;
+    top: 0;
+    right: -120%;
+    height: 100vh;
+    background-color: white;
+    padding: 78px 32px 0;
+    -webkit-transition: all .4s;
+    transition: all .4s;
+
+    // PCレイアウト
+    @include mixin.L {
+        -webkit-transition: unset;
+        transition: unset;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        right: 168px;
+        height: 60px;
+        background-color: transparent;
+        padding: 0;
+    }
+
+    a {
+        color: var.$mainColor;
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 3;
+        margin-bottom: 32px;
+
+        @include mixin.L {
+            line-height: 60px;
+            display: block;
+            margin: 0 0 0 24px;
+
+            &:hover {
+                color: var.$subColor;
+            }
+        }
+    }
+
+}
+
+// .header-navList
+
+/* メニュー内容が多い場合に縦スクロールする */
+.scroll {
+    overflow-y: scroll;
+    /* IE, Edge 対応 */
+    -ms-overflow-style: none;
+    /* Firefox 対応 */
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+        /* Google Chrome対策 */
+        display: none;
+    }
+}
+
+/* ボタンがクリックされた時 */
+.header-navList.active {
+    right: 0;
+}
+
+/* ボタンがクリックされた時、背景を暗く */
+.header-navList-bg.active {
+    z-index: 9000;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .8);
+    -webkit-transition: all .4s;
+    transition: all .4s;
+}
+
+/* ナビボタン
+================================= */
+.header-navBtn {
+    z-index: 11000;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 46px;
+    height: 46px;
+    background-color: white;
+    -webkit-transition: all .4s;
+    transition: all .4s;
+
+    @include mixin.L {
+        display: none;
+    }
+
+    span {
+        position: absolute;
+        z-index: 12000;
+        width: 32px;
+        height: 2px;
+        left: calc((46px - 32px) / 2);
+        top: calc((46px / 2) - 1px);
+        background-color: var.$mainColor;
+        -webkit-transition: all .4s;
+        transition: all .4s;
+
+        &:nth-of-type(1) {
+            -webkit-transform: translateY(-8px);
+            -ms-transform: translateY(-8px);
+            transform: translateY(-8px);
+        }
+
+        &:nth-of-type(3) {
+            -webkit-transform: translateY(8px);
+            -ms-transform: translateY(8px);
+            transform: translateY(8px);
+        }
+    }
+}
+
+// .header-navBtn
+
+/* ボタンがクリックされた時 */
+.header-navBtn.active {
+    background-color: var.$mainColor;
+
+    span {
+        background-color: white;
+
+        &:nth-of-type(1) {
+            -webkit-transform: translateY(0) rotate(-45deg);
+            -ms-transform: translateY(0) rotate(-45deg);
+            transform: translateY(0) rotate(-45deg);
+        }
+
+        &:nth-of-type(2) {
+            opacity: 0;
+        }
+
+        &:nth-of-type(3) {
+            -webkit-transform: translateY(0) rotate(45deg);
+            -ms-transform: translateY(0) rotate(45deg);
+            transform: translateY(0) rotate(45deg);
+        }
+    }
+}

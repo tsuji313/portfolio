@@ -1,0 +1,44 @@
+@use '../foundation/variable'as var;
+@use '../foundation/mixin';
+
+/*********************************************
+ * 
+ * MAIN VISUAL
+ *
+**********************************************/
+.MV {
+    position: relative;
+
+    &-text {
+        position: absolute;
+        top: 0px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        padding: 0 5%;
+
+        @include mixin.M {
+            padding: 0 18%;
+        }
+
+        @include mixin.L {
+            padding: 0 28%;
+        }
+    }
+
+    video {
+        // ↓videoタグがinline要素ため隙間ができるのを防ぐ
+        display: block;
+        -o-object-fit: cover;
+           object-fit: cover;
+        -o-object-position: center top;
+           object-position: center top;
+    }
+
+    &-text,
+    video {
+        width: 100vw;
+        height: 100vh;
+    }
+
+}

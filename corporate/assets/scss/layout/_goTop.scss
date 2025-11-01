@@ -1,0 +1,45 @@
+@use '../foundation/variable'as var;
+@use '../foundation/mixin';
+
+
+/*********************************************
+ * 
+ * goTop
+ *
+**********************************************/
+.goTop {
+  position: fixed;
+  z-index: 300;
+  right: 0;
+  bottom: 0;
+
+  a {
+    display: block;
+    padding-top: 10px;
+    width: 60px;
+    height: 60px;
+    background-color: var.$mainColor;
+    text-align: center;
+
+    @include mixin.M {
+      &:hover {
+        background-color: var.$subColor;
+      }
+    }
+  }
+}
+
+.triangle {
+  margin: 0 auto;
+  width: 0;
+  height: 0;
+  border-right: 16px solid transparent;
+  border-bottom: 9px solid white;
+  border-left: 16px solid transparent;
+}
+
+.text {
+  color: white;
+  font-size: 1.125rem;
+  line-height: 2;
+}

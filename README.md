@@ -9,4 +9,4 @@ HTML/CSS/JavaScriptで作ったポートフォリオサイトです。
 - JavaScript
 
 ## デモ
-[GitHub Pagesで公開中](https://rumiko313.github.io/portfolio/)
+[GitHub Pagesで公開中](https://tsuji313.github.io/portfolio/)

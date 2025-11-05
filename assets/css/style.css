@@ -85,34 +85,41 @@ header {
     }
 
     .hamburger-line {
-      position: relative;
-      display: block;
-      width: 100%;
+      position: absolute;
+      left: 50%;
+      width: 60px;
       height: 2px;
+      transform: translateX(-50%);
       background-color: var(--base-color);
-      border-radius: 1px;
       transition: all 0.5s ease;
-    }
-    .hamburger-line:nth-child(1) {
-      top: -10px;
-    }
-    .hamburger-line:nth-child(3) {
-      top: 10px;
+
+      &:nth-child(1) {
+        top: 18px;
+      }
+      &:nth-child(2) {
+        top: 29px;
+      }
+      &:nth-child(3) {
+        top: 40px;
+      }
     }
   }
 
   /* ハンバーガーメニューボタンをクリックしたとき */
-  .hamburger.open .hamburger-line:nth-child(1) {
-    transform: rotate(45deg);
-    top: 2px;
+  .hamburger.open .hamburger-line {
+    &:nth-child(1) {
+      transform: translateX(-50%) rotate(45deg);
+      top: 29px;
+    }
+    &:nth-child(2) {
+      opacity: 0;
+    }
+    &:nth-child(3) {
+      transform: translateX(-50%) rotate(-45deg);
+      top: 29px;
+    }
   }
-  .hamburger.open .hamburger-line:nth-child(2) {
-    opacity: 0;
-  }
-  .hamburger.open .hamburger-line:nth-child(3) {
-    transform: rotate(-45deg);
-    top: -2px;
-  }
+
   /* ナビリスト */
   .header-nav {
     position: fixed;

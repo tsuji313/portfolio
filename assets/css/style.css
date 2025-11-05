@@ -13,13 +13,6 @@
   --main-font: "Cormorant", serif;
   --base-font: "Noto Sans JP", serif;
   --accent-font: "Noto Serif JP", serif;
-  /* 
-light 300
-normal 300
-Medium 500;
-bold 700
-font-style normal
-*/
 }
 html,
 body {
@@ -158,16 +151,15 @@ header {
     color: var(--base-color);
     /* ホバー時 */
     transition: color 0.5s;
-  }
-
-  /* ホバー時 */
-  .nav-item:focus-visible {
-    color: var(--gray-color);
-  }
-  /* ホバー時 */
-  @media (any-hover: hover) {
-    .nav-item:hover {
+    /* ホバー時 */
+    &:focus-visible {
       color: var(--gray-color);
+    }
+    /* ホバー時 */
+    @media (any-hover: hover) {
+      &:hover {
+        color: var(--gray-color);
+      }
     }
   }
 }
@@ -182,6 +174,7 @@ header {
   bottom: 0;
   width: 20px;
   animation: arrowMove 1.8s ease-in-out infinite;
+
   @media (width < 600px) {
     display: none;
   }
@@ -193,26 +186,26 @@ header {
     font-size: 1.2rem;
     font-weight: 500;
     color: var(--accent-color);
-  }
 
-  span::before {
-    content: "";
-    position: absolute;
-    bottom: -60px;
-    right: 28px;
-    width: 1px;
-    height: 20px;
-    background-color: var(--accent-color);
-    transform: skewX(-31deg);
-  }
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -60px;
+      right: 28px;
+      width: 1px;
+      height: 20px;
+      background-color: var(--accent-color);
+      transform: skewX(-31deg);
+    }
 
-  span::after {
-    content: "";
-    position: absolute;
-    bottom: -60px;
-    width: 1px;
-    height: 120px;
-    background-color: var(--accent-color);
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -60px;
+      width: 1px;
+      height: 120px;
+      background-color: var(--accent-color);
+    }
   }
 }
 @keyframes arrowMove {
@@ -446,10 +439,11 @@ h3:not(:first-of-type) {
       }
     }
     tr {
-      border-bottom: dashed #fff 3px;
-    }
-    tr:first-of-type {
-      border-top: dashed #fff 3px;
+      border-bottom: dashed #ddd 3px;
+
+      &:first-of-type {
+        border-top: dashed #ddd 3px;
+      }
     }
   }
 }
@@ -465,10 +459,10 @@ h3:not(:first-of-type) {
 
   img {
     border: 6px solid #d0e3e3;
-  }
-  /* ホバー時 */
-  img:focus-visible {
-    border-color: var(--accent-color);
+    /* ホバー時 */
+    &:focus-visible {
+      border-color: var(--accent-color);
+    }
   }
   /* ホバー時 */
   @media (any-hover: hover) {
@@ -507,9 +501,9 @@ h3:not(:first-of-type) {
     }
     tr {
       border-bottom: dashed #ddd 3px;
-    }
-    tr:first-of-type {
-      border-top: dashed #ddd 3px;
+      &:first-of-type {
+        border-top: dashed #ddd 3px;
+      }
     }
   }
 }

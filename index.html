@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
   <head>
-    <!-- このサイトは検索エンジンにインデックスされないように設定しています -->
     <meta name="robots" content="noindex,nofollow,noarchive" />
     <meta charset="UTF-8" />
     <title>Tsuji Rumiko Portfolio Web更新・コーディング</title>
@@ -10,7 +9,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- FAVICON -->
-    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="icon" type="svg+xml" href="/icon.svg" />
+    <link rel="icon" href="favicon.ico" sizes="32x32" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" sizes="180x180" />
 
     <!-- FONT -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -43,8 +44,8 @@
       <nav class="header-nav">
         <ul class="nav-list">
           <li><a class="nav-item" href="#about">About</a></li>
-          <li><a class="nav-item" href="#experience">Experience</a></li>
           <li><a class="nav-item" href="#skills">Skills</a></li>
+          <li><a class="nav-item" href="#experience">Experience</a></li>
           <li><a class="nav-item" href="#works">Works</a></li>
           <li><a class="nav-item" href="#strengths">Strengths</a></li>
         </ul>
@@ -53,11 +54,11 @@
 
     <!-- サイトタイトル -->
     <div class="site-title">
-      <h1>
+      <p class="caption">
         Web Coding & Design<br />
         Portfolio<br />
-      </h1>
-      <p>Tsuji Rumiko | 辻ルミ子</p>
+      </p>
+      <h1>辻ルミ子 | Tsuji Rumiko</h1>
       <p>コーディング・更新作業・Web運用に対応します。</p>
     </div>
 
@@ -94,53 +95,8 @@
         </div>
       </section>
 
-      <!-- 経験してきたこと -->
-      <section id="experience" class="section">
-        <div class="sectionTitle">
-          <h2>Experience</h2>
-          <p>経験してきたこと</p>
-        </div>
-        <p>
-          これまでの職務では、LP制作、HTML更新・修正作業を中心に、デザイン補助や画像加工、データ登録など幅広く対応してきました。
-        </p>
-        <table>
-          <tbody>
-            <tr>
-              <th>2022年～2025年</th>
-              <td>
-                不動産会社で事務兼コーポレートサイト制作（HTML・CSS更新、LP作成）
-              </td>
-            </tr>
-            <tr>
-              <th>2015年～2019年</th>
-              <td>IT企業でデザイン部アシスタント（バナー作成、データ登録）</td>
-            </tr>
-            <tr>
-              <th>2009年～2010年</th>
-              <td>
-                Web・DTPオペレーターとして一般社団法人で勤務（サイト作成、ショップサイト商品登録、テキスト作成）
-              </td>
-            </tr>
-            <tr>
-              <th>2007年～2009年</th>
-              <td>
-                プリンタメーカーで販促物の制作とショールーム対応を担当（カレンダー・サンプル作成）
-              </td>
-            </tr>
-            <tr>
-              <th>2003年～2004年</th>
-              <td>DTPオペレーターとして広告代理店で勤務（DM・カタログ作成）</td>
-            </tr>
-            <tr>
-              <th>1995年～2001年</th>
-              <td>イベントサービス業に従事</td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
-
       <!-- 現在できること -->
-      <section id="skills" class="section bg-light">
+      <section id="skills" class="section">
         <div class="sectionTitle">
           <h2>Skills</h2>
           <p>現在できること</p>
@@ -186,6 +142,51 @@
         </table>
       </section>
 
+      <!-- 経験してきたこと -->
+      <section id="experience" class="section bg-light">
+        <div class="sectionTitle">
+          <h2>Experience</h2>
+          <p>経験してきたこと</p>
+        </div>
+        <p>
+          これまでの職務では、LP制作、HTML更新・修正作業を中心に、デザイン補助や画像加工、データ登録など幅広く対応してきました。
+        </p>
+        <table>
+          <tbody>
+            <tr>
+              <th>2022年～2025年</th>
+              <td>
+                不動産会社で事務兼コーポレートサイト制作（HTML・CSS更新、LP作成）
+              </td>
+            </tr>
+            <tr>
+              <th>2015年～2019年</th>
+              <td>IT企業でデザイン部アシスタント（バナー作成、データ登録）</td>
+            </tr>
+            <tr>
+              <th>2009年～2010年</th>
+              <td>
+                Web・DTPオペレーターとして一般社団法人で勤務（サイト作成、ショップサイト商品登録、テキスト作成）
+              </td>
+            </tr>
+            <tr>
+              <th>2007年～2009年</th>
+              <td>
+                プリンタメーカーで販促物の制作とショールーム対応を担当（カレンダー・サンプル作成）
+              </td>
+            </tr>
+            <tr>
+              <th>2003年～2004年</th>
+              <td>DTPオペレーターとして広告代理店で勤務（DM・カタログ作成）</td>
+            </tr>
+            <tr>
+              <th>1995年～2001年</th>
+              <td>イベントサービス業に従事</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
       <!-- 制作物 -->
       <section id="works" class="section">
         <div class="sectionTitle">
@@ -203,7 +204,7 @@
                 rel="noopener noreferrer"
                 ><img
                   src="assets/img/works_3.png"
-                  alt="不動産会社コーポレートサイトのスクリーンショット"
+                  alt="不動産会社コーポレートサイトのトップページイメージ"
               /></a>
             </p>
             <table>
@@ -240,7 +241,7 @@
                 rel="noopener noreferrer"
                 ><img
                   src="assets/img/works_4.png"
-                  alt="不動産会社LPサイトのスクリーンショット"
+                  alt="不動産会社LPサイトのトップページイメージ"
               /></a>
             </p>
             <table>
@@ -277,7 +278,7 @@
                 rel="noopener noreferrer"
                 ><img
                   src="assets/img/works_2.jpg"
-                  alt="電子部品制作所のコーポレートサイトのスクリーンショット"
+                  alt="電子部品制作所のコーポレートサイトのトップページイメージ"
               /></a>
             </p>
             <p>※ 架空の設定で作成しました。</p>
@@ -312,7 +313,7 @@
                 rel="noopener noreferrer"
                 ><img
                   src="assets/img/works_1.jpg"
-                  alt="フラワーショップサイトのスクリーンショット"
+                  alt="フラワーショップサイトのトップページイメージ"
               /></a>
             </p>
             <p>※ 架空の設定で作成しました。</p>

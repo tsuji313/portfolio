@@ -43,8 +43,6 @@ img {
 **********************************************/
 /* サイトタイトル */
 .site-title {
-  /* アニメーションの指定 */
-  animation: fadeInUp 2s ease forwards;
   padding: 32px;
 
   @media (width < 700px) {
@@ -61,17 +59,6 @@ img {
     @media (width < 700px) {
       font-size: 1.8rem;
     }
-  }
-}
-/* フェードイン効果 */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
   }
 }
 

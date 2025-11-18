@@ -24,6 +24,26 @@
       false
     );
   }
+
+  /*================================================*/
+  /*サイトタイトルのアニメーション*/
+  /*================================================*/
+  {
+    const siteTitle = document.querySelector('.site-title');
+
+    const fadeInUp = {
+      opacity: [0, 1],
+      transform: 'translateY(16px)',
+    };
+    const options = {
+      duration: 2000,
+      easing: 'ease',
+      fill: 'forwards',
+    };
+
+    siteTitle.animate(fadeInUp, options);
+  }
+
   /*================================================*/
   /*Topへ戻るボタン*/
   /*================================================*/

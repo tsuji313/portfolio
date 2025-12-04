@@ -279,16 +279,11 @@ header {
 *
 **********************************************/
 .section {
-  margin-bottom: 10rem;
-
-  @media (width < 600px) {
-    margin-bottom: 4rem;
-  }
+  padding: clamp(4rem, 2.125rem + 5vw, 5.875rem) 0;
 }
 
 /* セクションの背景 */
 .section.bg-light {
-  padding: 2rem 0 3rem;
   background-color: var(--base-color);
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
@@ -473,11 +468,7 @@ h3:not(:first-of-type) {
   }
 
   .works-item:not(:last-of-type) {
-    padding-bottom: 10rem;
-
-    @media (width < 700px) {
-      padding-bottom: 3rem;
-    }
+    padding: clamp(3rem, 1rem + 5.3333vw, 5rem) 0;
   }
   /* 説明のテーブル */
   table {

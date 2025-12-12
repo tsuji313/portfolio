@@ -1,280 +1,246 @@
 <!DOCTYPE html>
 <html lang="ja">
-
-<head>
-    <meta name="robots" content="noindex,nofollow,noarchive">
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Flower Shop Abelia | フラワーショップ アベリア</title>
+    <meta name="description" content="ポートフォリオのために作成した架空サイトです。" />
+    <meta name="robots" content="noindex,nofollow,noarchive" />
 
     <!-- favicon -->
-    <link rel="icon" href="favicon.svg" type="image/svg+xml">
-    <link rel="Shortcut Icon" href="favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-
-    <meta name="description" content="フラワーショップアベリアは、ポートフォリオのために作成した架空サイトです。">
-    <meta name="keywords" content="東京,千代田区,花屋,フラワーショップ,花束,切り花,フラワーアレンジメント,プレゼント">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="Shortcut Icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
 
     <!-- fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Italianno&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
-        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Italianno&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous" />
 
     <!-- css -->
-    <link rel="stylesheet" href="css/destyle.css">
-    <link rel="stylesheet" href="css/style.css">
-</head>
+    <link rel="stylesheet" href="https://unpkg.com/destyle.css@3.0.0/destyle.css" />
+    <link rel="stylesheet" href="css/style.css" />
 
-<body>
-    <!-- header -->
-    <header class="header">
+    <!-- JavaScript -->
+    <script src="script/script.js" defer></script>
+  </head>
+
+  <body>
+    <header>
+      <div class="header-img">
         <h1 class="siteTitle">Flower shop Abelia</h1>
+      </div>
+      <div class="overlay"></div>
+      <nav class="global-nav container">
+        <!-- アクセシビリティ対応 -->
+        <button class="nav-btn" aria-expanded="false">Menu</button>
+        <ul class="nav-list">
+          <li><a href="#">TOP</a></li>
+          <li><a href="#cutflowers">色とりどりの切り花</a></li>
+          <li><a href="#arrangement">アレンジメントのお花</a></li>
+          <li><a href="#">オンラインショップ</a></li>
+          <li><a href="#shop">店舗案内</a></li>
+          <li><a href="#contact">お問合せ</a></li>
+        </ul>
+      </nav>
     </header>
 
-    <div class="container">
-
-        <!-- topNav -->
-        <nav>
-
-            <ul class="topMenu">
-                <li><a href="#cutflowers">色とりどりの切り花</a></li>
-                <li><a href="#arrangement">アレンジメントのお花</a></li>
-                <li><a href="#">オンラインショップ</a></li>
-                <li><a href="#shop">店舗案内</a></li>
-                <li><a href="#contact">お問合せ</a></li>
-            </ul>
-
-        </nav>
-
-        <!-- sideMenu -->
-        <nav>
-
-            <button class="nav_btn">Menu</button>
-
-            <ul class="sideMenu">
-                <li><a class="js_menuList" href="#">Top</a></li>
-                <li><a class="js_menuList" href="#cutflowers">色とりどりの切り花</a></li>
-                <li><a class="js_menuList" href="#arrangement">アレンジメントのお花</a></li>
-                <li><a class="js_menuList" href="#">オンラインショップ</a></li>
-                <li><a class="js_menuList" href="#shop">店舗案内</a></li>
-                <li><a class="js_menuList" href="#contact">お問合せ</a></li>
-            </ul>
-
-        </nav>
-
-        <!-- main -->
-        <main>
-
-            <section id="about">
-                <h2 class="sectionTitle">Flower shop Abeliaは<br class="br-sp">こんなお店</h2>
-                <p class="lead">本サイトは、ポートフォリオのために作成した架空サイトです。<br>
-                    店名、住所、商品など全て実在しません。画像は、フリー素材を使用しています。<br>
-                    45歳〜55歳をターゲットに「親しみやすさ」と「手頃さ」をイメージしました。<br>
-                    店舗を知ってもらうこと、オンラインショップへの誘導が目的です。</p>
-                <div class="wrap">
-                    <figure class="item">
-                        <img src="img/about1.jpg" srcset="img/about1@2x.jpg 2x" alt="店舗イメージ画像">
-                        <figcaption>植物園のような店内です</figcaption>
-                    </figure>
-                    <figure class="item">
-                        <img src="img/about2.jpg" srcset="img/about2@2x.jpg 2x" alt="店舗イメージ画像">
-                        <figcaption>鑑賞だけでもぜひ足を運んでくださいね。</figcaption>
-                    </figure>
-                    <figure class="item">
-                        <img src="img/about3.jpg" srcset="img/about3@2x.jpg 2x" alt="店舗イメージ画像">
-                        <figcaption>季節によって取り揃えているお花の種類がかわります。</figcaption>
-                    </figure>
-                </div>
-                <!-- /.wrap -->
-            </section>
-
-            <section id="cutflowers">
-                <h2 class="sectionTitle">色とりどりの切り花</h2>
-                <p class="lead">ご自身でアレンジメントされる方のために、たくさんの切り花を揃えました。<br>
-                    １本からご購入できます。季節によって取り揃えているお花が変わります。<br>
-                    オンラインショップからでもご購入できます。</p>
-                <div class="wrap">
-                    <figure class="item">
-                        <img src="img/cutflowers1.jpg" srcset="img/cutflowers1@2x.jpg 2x" alt="切り花の写真">
-                        <figcaption>テキストテキストテキスト</figcaption>
-                    </figure>
-                    <figure class="item">
-                        <img src="img/cutflowers2.jpg" srcset="img/cutflowers2@2x.jpg 2x" alt="切り花の写真">
-                       <figcaption>テキストテキストテキスト</figcaption>
-                    </figure>
-                    <figure class="item">
-                        <img src="img/cutflowers3.jpg" srcset="img/cutflowers3@2x.jpg 2x" alt="切り花の写真">
-                        <figcaption>テキストテキストテキスト</figcaption>
-                    </figure>
-                    <figure class="item">
-                        <img src="img/cutflowers4.jpg" srcset="img/cutflowers4@2x.jpg 2x" alt="切り花の写真">
-                       <figcaption>テキストテキストテキスト</figcaption>
-                    </figure>
-                    <figure class="item">
-                        <img src="img/cutflowers5.jpg" srcset="img/cutflowers5@2x.jpg 2x" alt="切り花の写真">
-                        <figcaption>テキストテキストテキスト</figcaption>
-                    </figure>
-                    <figure class="item">
-                        <img src="img/cutflowers6.jpg" srcset="img/cutflowers6@2x.jpg 2x" alt="切り花の写真">
-                        <figcaption>テキストテキストテキスト</figcaption>
-                    </figure>
-                    <figure class="item">
-                        <img src="img/cutflowers7.jpg" srcset="img/cutflowers7@2x.jpg 2x" alt="切り花の写真">
-                        <figcaption>テキストテキストテキスト</figcaption>
-                    </figure>
-                    <figure class="item">
-                        <img src="img/cutflowers8.jpg" srcset="img/cutflowers8@2x.jpg 2x" alt="切り花の写真">
-                        <figcaption>テキストテキストテキスト</figcaption>
-                    </figure>
-                    <figure class="item">
-                        <img src="img/cutflowers9.jpg" srcset="img/cutflowers9@2x.jpg 2x" alt="切り花の写真">
-                        <figcaption>テキストテキストテキスト</figcaption>
-                    </figure>
-                </div>
-                <!-- /.wrap -->
-            </section>
-
-            <div class="btn">
-                <a href="#">オンラインサイトへ</a>
-            </div>
-
-            <section id="arrangement">
-                <h2 class="sectionTitle">アレンジメントのお花</h2>
-                <p class="lead">贈り物、ご自宅用にアレンジメントも致します。<br>
-                    オンラインショップからご購入できます。<br>
-                    ご希望を賜ってからアレンジすることもできますので、お気軽にお問い合わせください。</p>
-                <div class="wrap">
-                    <figure class="item">
-                        <img src="img/arrangement1.jpg" srcset="img/arrangement1@2x.jpg 2x" alt="切り花の写真">
-                       <figcaption>テキストテキストテキスト</figcaption>
-                    </figure>
-                    <figure class="item">
-                        <img src="img/arrangement2.jpg" srcset="img/arrangement2@2x.jpg 2x" alt="切り花の写真">
-                        <figcaption>テキストテキストテキスト</figcaption>
-                    </figure>
-                    <figure class="item">
-                        <img src="img/arrangement3.jpg" srcset="img/arrangement3@2x.jpg 2x" alt="切り花の写真">
-                        <figcaption>テキストテキストテキスト</figcaption>
-                    </figure>
-                    <figure class="item">
-                        <img src="img/arrangement4.jpg" srcset="img/arrangement4@2x.jpg 2x" alt="切り花の写真">
-                        <figcaption>テキストテキストテキスト</figcaption>
-                    </figure>
-                    <figure class="item">
-                        <img src="img/arrangement5.jpg" srcset="img/arrangement5@2x.jpg 2x" alt="切り花の写真">
-                        <figcaption>テキストテキストテキスト</figcaption>
-                    </figure>
-                    <figure class="item">
-                        <img src="img/arrangement6.jpg" srcset="img/arrangement6@2x.jpg 2x" alt="切り花の写真">
-                       <figcaption>テキストテキストテキスト</figcaption>
-                    </figure>
-
-
-                </div>
-                <!-- /.wrap -->
-            </section>
-
-            <div class="btn">
-                <a href="#">オンラインサイトへ</a>
-            </div>
-
-            <section id="shop">
-                <h2 class="sectionTitle">店舗のご案内</h2>
-                <div class="shopDetailed">
-                    <ul class="shopData">
-                        <li><span>住所：</span>東京都千代田区五番町0-1000</li>
-                        <li><span>電話：</span>03-1234-5678</li>
-                        <li><span>Mail：</span>12345678@e-mail.com</li>
-                        <li><span>SNS：</span>
-                            <a href="https://www.instagram.com/"><i class="fab fa-instagram-square"></i></a>
-                            <a href="https://ja-jp.facebook.com/"><i class="fab fa-facebook-square"></i></a>
-                            <a href="https://twitter.com/?lang=ja"><i class="fab fa-twitter-square"></i></a>
-                        </li>
-                        <li><span>営業時間：</span>10:00〜20:00</li>
-                        <li><span>定休日：</span>日曜日</li>
-                    </ul>
-                    <div class="shopMap">
-                        <div class="mapArea">
-                            <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.485885162736!2d139.73157221580797!3d35.68965908711597!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188c604f9393af%3A0x79d9c9a192bfb6e3!2z44CSMTAyLTAwNzYg5p2x5Lqs6YO95Y2D5Luj55Sw5Yy65LqU55Wq55S6!5e0!3m2!1sja!2sjp!4v1621313693307!5m2!1sja!2sjp"
-                                width="100%" height="auto" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                        </div>
-                        <!-- /.mapArea -->
-                    </div>
-                    <!-- /.shopMap -->
-                </div>
-                <!-- /.shopDetailed -->
-                <hr>
-            </section>
-
-            <section id="contact">
-                <h2 class="sectionTitle">お問合せ</h2>
-                <p class="lead">お手数ですが、下記よりご入力ください。<br>
-                    ３営業日以内にご連絡させていただきます。</p>
-
-                <form action="#">
-                    <table class="contact_table">
-
-                        <tr>
-                            <th><label for="name">お名前：</label></th>
-                            <td><input type="text" name="name" id="name"></td>
-                        </tr>
-
-                        <tr>
-                            <th><label for="mail">メールアドレス：</label></th>
-                            <td><input type="email" name="mail" id="mail"></td>
-                        </tr>
-
-                        <tr>
-                            <th><label for="tel">お電話番号：</label></th>
-                            <td><input type="tel" name="tel" id="tel"></td>
-                        </tr>
-
-                        <tr>
-                            <th><label for="comment">お問合せ内容：</label></th>
-                            <td><textarea name="comment" id="comment" cols="30" rows="10"></textarea></td>
-                        </tr>
-
-                    </table>
-
-                    <div class="btn">
-                        <a href="#">送信する</a>
-                    </div>
-
-                </form>
-
-
-            </section>
-
-        </main>
-
+    <div class="topTo">
+      <a href="#">Top</a>
     </div>
-    <!-- /.container -->
 
-    <!-- footer -->
-    <footer class="footer">
-        <div class="tooter_wrap">
-            <table>
-                <tbody>
+    <div class="container">
+      <main>
+        <section id="about" class="section">
+          <h2 class="section-title">Flower shop Abelia はこんなお店</h2>
+          <p class="lead">
+            本サイトは、ポートフォリオのために作成した架空サイトです。<br />店名、住所、商品など全て実在しません。画像は、フリー素材を使用しています。<br />
+            45歳〜55歳をターゲットに「親しみやすさ」と「手頃さ」をイメージしました。<br />
+            店舗を知ってもらうこと、オンラインショップへの誘導が目的です。
+          </p>
 
-                    <tr>
-                        <td class="footer_logo">Flower shop Abelia</td>
-                        <td class="copyright"><small>@ 2021 Flower shop Abelia</small></td>
-                        <td class="footer_sns">
-                            <a href="https://www.instagram.com/"><i class="fab fa-instagram-square"></i></a>
-                            <a href="https://ja-jp.facebook.com/"><i class="fab fa-facebook-square"></i></a>
-                            <a href="https://twitter.com/?lang=ja"><i class="fab fa-twitter-square"></i></a>
-                        </td>
-                    </tr>
+          <div class="section-items">
+            <figure class="item">
+              <img src="img/about1.jpg" srcset="img/about1@2x.jpg 2x" loading="lazy" alt="店舗イメージ画像" />
+              <figcaption>植物園のような店内です</figcaption>
+            </figure>
+            <figure class="item">
+              <img src="img/about2.jpg" srcset="img/about2@2x.jpg 2x" loading="lazy" alt="店舗イメージ画像" />
+              <figcaption>鑑賞だけでもぜひ足を運んでくださいね。</figcaption>
+            </figure>
+            <figure class="item">
+              <img src="img/about3.jpg" srcset="img/about3@2x.jpg 2x" loading="lazy" alt="店舗イメージ画像" />
+              <figcaption>季節によって取り揃えているお花の種類がかわります。</figcaption>
+            </figure>
+          </div>
+        </section>
 
-                </tbody>
-            </table>
+        <section id="cutflowers" class="section">
+          <h2 class="section-title">色とりどりの切り花</h2>
+          <p class="lead">
+            ご自身でアレンジされる方のために、たくさんの切り花を揃えました。<br />
+            １本からご購入できます。<br />季節によって取り揃えているお花が変わります。<br />
+            オンラインショップからでもご購入できます。
+          </p>
+          <div class="section-items">
+            <figure class="item">
+              <img src="img/cutflowers1.jpg" srcset="img/cutflowers1@2x.jpg 2x" loading="lazy" alt="切り花の写真" />
+              <figcaption>テキストテキストテキスト</figcaption>
+            </figure>
+            <figure class="item">
+              <img src="img/cutflowers2.jpg" srcset="img/cutflowers2@2x.jpg 2x" loading="lazy" alt="切り花の写真" />
+              <figcaption>テキストテキストテキスト</figcaption>
+            </figure>
+            <figure class="item">
+              <img src="img/cutflowers3.jpg" srcset="img/cutflowers3@2x.jpg 2x" loading="lazy" alt="切り花の写真" />
+              <figcaption>テキストテキストテキスト</figcaption>
+            </figure>
+            <figure class="item">
+              <img src="img/cutflowers4.jpg" srcset="img/cutflowers4@2x.jpg 2x" loading="lazy" alt="切り花の写真" />
+              <figcaption>テキストテキストテキスト</figcaption>
+            </figure>
+            <figure class="item">
+              <img src="img/cutflowers5.jpg" srcset="img/cutflowers5@2x.jpg 2x" loading="lazy" alt="切り花の写真" />
+              <figcaption>テキストテキストテキスト</figcaption>
+            </figure>
+            <figure class="item">
+              <img src="img/cutflowers6.jpg" srcset="img/cutflowers6@2x.jpg 2x" loading="lazy" alt="切り花の写真" />
+              <figcaption>テキストテキストテキスト</figcaption>
+            </figure>
+            <figure class="item">
+              <img src="img/cutflowers7.jpg" srcset="img/cutflowers7@2x.jpg 2x" loading="lazy" alt="切り花の写真" />
+              <figcaption>テキストテキストテキスト</figcaption>
+            </figure>
+            <figure class="item">
+              <img src="img/cutflowers8.jpg" srcset="img/cutflowers8@2x.jpg 2x" loading="lazy" alt="切り花の写真" />
+              <figcaption>テキストテキストテキスト</figcaption>
+            </figure>
+            <figure class="item">
+              <img src="img/cutflowers9.jpg" srcset="img/cutflowers9@2x.jpg 2x" loading="lazy" alt="切り花の写真" />
+              <figcaption>テキストテキストテキスト</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <div class="shopTo">
+          <a href="#">オンラインサイトへ</a>
         </div>
-        <!-- /.tooter_wrap -->
-    </footer>
-    <script src="script/script.js"></script>
-</body>
 
+        <section id="arrangement" class="section">
+          <h2 class="section-title">アレンジメントのお花</h2>
+          <p class="lead">
+            贈り物、ご自宅用にアレンジメントも致します。<br />
+            オンラインショップからご購入できます。<br />
+            ご希望を賜ってからアレンジすることもできますので、お気軽にお問い合わせください。
+          </p>
+          <div class="section-items">
+            <figure class="item">
+              <img src="img/arrangement1.jpg" srcset="img/arrangement1@2x.jpg 2x" loading="lazy" alt="切り花の写真" />
+              <figcaption>テキストテキストテキスト</figcaption>
+            </figure>
+            <figure class="item">
+              <img src="img/arrangement2.jpg" srcset="img/arrangement2@2x.jpg 2x" loading="lazy" alt="切り花の写真" />
+              <figcaption>テキストテキストテキスト</figcaption>
+            </figure>
+            <figure class="item">
+              <img src="img/arrangement3.jpg" srcset="img/arrangement3@2x.jpg 2x" loading="lazy" alt="切り花の写真" />
+              <figcaption>テキストテキストテキスト</figcaption>
+            </figure>
+            <figure class="item">
+              <img src="img/arrangement4.jpg" srcset="img/arrangement4@2x.jpg 2x" loading="lazy" alt="切り花の写真" />
+              <figcaption>テキストテキストテキスト</figcaption>
+            </figure>
+            <figure class="item">
+              <img src="img/arrangement5.jpg" srcset="img/arrangement5@2x.jpg 2x" loading="lazy" alt="切り花の写真" />
+              <figcaption>テキストテキストテキスト</figcaption>
+            </figure>
+            <figure class="item">
+              <img src="img/arrangement6.jpg" srcset="img/arrangement6@2x.jpg 2x" loading="lazy" alt="切り花の写真" />
+              <figcaption>テキストテキストテキスト</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <div class="shopTo">
+          <a href="#">オンラインサイトへ</a>
+        </div>
+
+        <section id="shop" class="section">
+          <h2 class="section-title">店舗のご案内</h2>
+          <div class="shop-detailed">
+            <address class="shop-data">
+              <p>住所：東京都千代田区五番町0-1000</p>
+              <p>電話：03-1234-5678</p>
+              <p>Mail：12345678@e-mail.com</p>
+              <p>
+                SNS：
+                <a href="https://www.instagram.com/"><i class="fab fa-instagram-square"></i></a>
+                <a href="https://ja-jp.facebook.com/"><i class="fab fa-facebook-square"></i></a>
+                <a href="https://twitter.com/?lang=ja"><i class="fab fa-twitter-square"></i></a>
+              </p>
+              <p>営業時間：10:00〜20:00</p>
+              <p>定休日：日曜日</p>
+            </address>
+            <div class="shop-map">
+              <div class="map-area">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.485885162736!2d139.73157221580797!3d35.68965908711597!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188c604f9393af%3A0x79d9c9a192bfb6e3!2z44CSMTAyLTAwNzYg5p2x5Lqs6YO95Y2D5Luj55Sw5Yy65LqU55Wq55S6!5e0!3m2!1sja!2sjp!4v1621313693307!5m2!1sja!2sjp" width="100%" height="auto" style="border: 0" allowfullscreen="" loading="lazy"></iframe>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <hr />
+
+        <section id="contact" class="section">
+          <h2 class="section-title">お問合せ</h2>
+          <p class="lead">
+            お手数ですが、下記よりご入力ください。<br />
+            ３営業日以内にご連絡させていただきます。
+          </p>
+
+          <form action="#">
+            <table class="contact-table">
+              <tr>
+                <th><label for="name">お名前：</label></th>
+                <td><input type="text" name="name" id="name" /></td>
+              </tr>
+
+              <tr>
+                <th><label for="mail">メールアドレス：</label></th>
+                <td><input type="email" name="mail" id="mail" /></td>
+              </tr>
+
+              <tr>
+                <th><label for="tel">お電話番号：</label></th>
+                <td><input type="tel" name="tel" id="tel" /></td>
+              </tr>
+
+              <tr>
+                <th><label for="comment">お問合せ内容：</label></th>
+                <td><textarea name="comment" id="comment" cols="30" rows="10"></textarea></td>
+              </tr>
+            </table>
+            <div class="send-btn">
+              <button type="submit">送信する</button>
+            </div>
+          </form>
+        </section>
+      </main>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-wrap container">
+        <p class="footer-logo">Flower shop Abelia</p>
+        <small class="footer-copy">@ 2021 Flower shop Abelia</small>
+        <div class="footer-sns">
+          <a href="https://www.instagram.com/"><i class="fab fa-instagram-square"></i></a>
+          <a href="https://ja-jp.facebook.com/"><i class="fab fa-facebook-square"></i></a>
+          <a href="https://twitter.com/?lang=ja"><i class="fab fa-twitter-square"></i></a>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
